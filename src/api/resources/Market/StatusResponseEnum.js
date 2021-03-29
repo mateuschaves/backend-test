@@ -1,4 +1,4 @@
-export default  {
-    ACCEPT: "ACCEPT",
-    REJECT: "REJECT",
-};
+export default {
+  ACCEPT: 'ACCEPT',
+  REJECT: 'REJECT'
+}

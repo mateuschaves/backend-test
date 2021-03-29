@@ -1,16 +1,17 @@
-import { validationResult } from "express-validator";
+import { validationResult } from 'express-validator'
 
 class Validation {
-  hasErrors(req) {
+  // eslint-disable-next-line class-methods-use-this
+  hasErrors (request) {
     return new Promise((resolve, reject) => {
-      const errors = validationResult(req);
+      const errors = validationResult(request)
       if (!errors.isEmpty()) {
-        reject(errors.array());
+        reject(errors.array())
       } else {
-        resolve();
+        resolve()
       }
-    });
+    })
   }
 }
 
-export default new Validation();
+export default new Validation()

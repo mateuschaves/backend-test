@@ -1,6 +1,6 @@
-import app from "./app";
-import routes from "./api/routes";
+import app from './app'
+import routes from './api/routes'
 
 app
   .routes(routes)
-  .listen(process.env.PORT || 4000);
+  .listen(process.env.PORT || 4000)

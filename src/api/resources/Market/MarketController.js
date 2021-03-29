@@ -1,25 +1,28 @@
-import { ValidationHelper } from "../../helpers";
+import { ValidationHelper } from '../../helpers'
 
-import MarketValidationChain from './MarketValidationChain';
+import MarketValidationChain from './MarketValidationChain'
 
 class MarketController {
-  async create(request, response) {
+  // eslint-disable-next-line class-methods-use-this
+  async create (request, response) {
     try {
-      await ValidationHelper.hasErrors(request);
+      await ValidationHelper.hasErrors(request)
 
-      const { marketStatus, price, founds, size } = request.body;
+      const {
+        marketStatus, price, founds, size
+      } = request.body
 
       const status = new MarketValidationChain()
         .checkMarketStatus(marketStatus)
         .checkSizeValue(Number(size), Number(founds))
         .checkPrice(price)
-        .validate();
+        .validate()
 
-      return response.json({ status });
+      return response.json({ status })
     } catch (error) {
-      return response.status(400).json(error);
+      return response.status(400).json(error)
     }
   }
 }
 
-export default new MarketController();
+export default new MarketController()
