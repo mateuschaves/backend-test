@@ -8,8 +8,12 @@
   "license": "MIT",
   "private": false,
   "type": "module",
+  "engine": {
+    "node": "12.19.0"
+  },
   "scripts": {
-    "build": "sucrase ./src -w ./dist --transforms imports",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "prestart": "npm run build",
     "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.js",
     "eslint": "./node_modules/.bin/eslint . --fix",
