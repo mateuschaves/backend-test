@@ -24,7 +24,6 @@ $ yarn dev
 $ yarn start
 
 # tests
-
 $ yarn test
 ```
 
@@ -34,8 +33,9 @@ $ yarn test
 
 # build and start
 $ docker-compose up
+```
 
-## Design Patten
+### Design Patten
 
 # Chain of Responsibility
 
