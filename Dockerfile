@@ -7,6 +7,6 @@ RUN yarn
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE ${PORT}
 
-CMD ["yarn", "start:dev"]
+CMD ["yarn", "start"]

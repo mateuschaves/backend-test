@@ -4,17 +4,12 @@ import cors from "cors";
 import express from "express";
 import "express-async-errors";
 
-import routes from "./app/routes";
-import "./database";
-
 dotenv.config();
 
 class App {
   constructor() {
     this.server = express();
-
     this.middlewares();
-    this.routes();
   }
 
   middlewares() {
@@ -22,9 +17,16 @@ class App {
     this.server.use(cors());
   }
 
-  routes() {
-    this.server.use(routes);
+  routes(routes) {
+    routes(this.server);
+    return this;
+  }
+
+  listen(port) {
+    this.server.listen(port, () => {
+      console.log(`listening on port ${port}`);
+    });
   }
 }
 
-export default new App().server;
+export default new App();
