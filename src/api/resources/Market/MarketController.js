@@ -3,7 +3,6 @@ import { ValidationHelper } from '../../helpers'
 import MarketValidationChain from './MarketValidationChain'
 
 class MarketController {
-  // eslint-disable-next-line class-methods-use-this
   async create (request, response) {
     try {
       await ValidationHelper.hasErrors(request)
