@@ -7,11 +7,13 @@
   "author": "Mateus Henrique <mateushenriquechaves1@gmail.com>",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "scripts": {
     "build": "sucrase ./src -w ./dist --transforms imports",
     "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.js",
-    "eslint": "./node_modules/.bin/eslint . --fix"
+    "eslint": "./node_modules/.bin/eslint . --fix",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,6 +30,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.4",
     "sucrase": "^3.15.0"
   }
