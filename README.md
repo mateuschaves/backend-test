@@ -1,27 +1,42 @@
-# Template NodeJS API 
-Node API template using Express, Sucrase, Sequelize, Express validator and Postgres
+# NodeJS API 
 
-
-# Instalation
+# Instalação
 
 ```bash
 $ yarn install
 ```
 
 
-## Technologies
+## Tecnologias
 
 :white_check_mark: Express\
-:white_check_mark: Sucrase\
 :white_check_mark: Express validator\
-:white_check_mark: Postgres\
-:white_check_mark: Docker
+:white_check_mark: Docker\
+:white_check_mark: Docker compose
 
-## Running
+## Executando
 
 ```bash
 # development mode
 $ yarn dev
 
-# build
-$ yarn build
+# build and start
+$ yarn start
+
+# tests
+
+$ yarn test
+```
+
+## Executando com o Docker
+
+```bash
+
+# build and start
+$ docker-compose up
+
+## Design Patten
+
+# Chain of Responsibility
+
+Utilizando esse design pattern, nós conseguimos isolar cada condição em uma função separada diminuindo o acoplamento e facilitando a manutenção e legibilidade do código.
