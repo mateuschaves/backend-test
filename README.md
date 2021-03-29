@@ -37,6 +37,6 @@ $ docker-compose up
 
 ### Design Patten
 
-# Chain of Responsibility
+#### Chain of Responsibility
 
 Utilizando esse design pattern, nós conseguimos isolar cada condição em uma função separada diminuindo o acoplamento e facilitando a manutenção e legibilidade do código.
