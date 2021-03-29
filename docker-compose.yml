@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  api:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    command: yarn start
+    container_name: "api"
+    environment:
+      PORT: ${PORT}
+    deploy:
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:${PORT}"
